@@ -1,4 +1,24 @@
 .subjects-container {
     grid-column: 2/3;
     grid-row: 2/3;
+    display: flex;
+    gap: var(--gap-large);
+    overflow-x: auto;
+    padding: var(--padding-xsmall) 0;
+}
+
+.subjects-container::-webkit-scrollbar {
+    display: none;
+}
+
+.subjects-container-list-item {
+    padding: var(--padding-small) var(--padding-medium);
+    border-radius: var(--border-radius-large);
+    border: 0.5px solid var(--spacegrey-800);
+    cursor: pointer;
+}
+
+.subjects-container-list-item:hover {
+    background-color: var(--accent);
+    font-weight: var(--font-weight-bold);
 }

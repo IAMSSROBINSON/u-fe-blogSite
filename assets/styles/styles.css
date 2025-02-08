@@ -21,7 +21,7 @@
   --spacegrey-100: #f8f9fa;
 
   /* Accent color */
-  --accent-: hsl(50, 100%, 93%);
+  --accent: hsl(50, 100%, 93%);
   --accent-hue: 50;
   --accent-saturation: 100%;
   --accent-lightness: 93%;
