@@ -1,5 +1,5 @@
 .footer-container {
-    grid-column: 2/3;
+    margin-top: calc(var(--margin-xlarge) * 2);
     grid-column: 1/-1;
     grid-row: 5/6;
     
