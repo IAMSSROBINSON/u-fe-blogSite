@@ -12,7 +12,7 @@
     display: none;
 }
 
-.subjects-container-list-item {
+.subjects-list-item {
     padding: var(--padding-small) var(--padding-large);
     border-radius: var(--border-radius-large);
     border: 0.5px solid var(--spacegrey-800);
@@ -20,7 +20,7 @@
     font-size: var(--font-size-medium);
 }
 
-.subjects-container-list-item:hover {
+.subjects-list-item:hover {
     background-color: var(--accent);
     font-weight: var(--font-weight-bold);
 }
