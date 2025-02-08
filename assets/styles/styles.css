@@ -1,0 +1,105 @@
+:root {
+    font-size: 62.5%;
+  
+    /* Variables */
+  
+    /* Colors => Attribution: https://yeun.github.io/open-color/ */
+    --spacegrey-900: #212529;
+    --spacegrey-800: #343a40;
+    --spacegrey-700: #495057;
+    --spacegrey-600: #868e96;
+    --spacegrey-500: #adb5bd;
+    --spacegrey-400: #ced4da;
+    --spacegrey-300: #dee2e6;
+    --spacegrey-200: #f1f3f5;
+    --spacegrey-100: #f8f9fa;
+  
+    /* Accent color */
+    --accent-: hsl(50, 100%, 93%);
+    --accent-hue: 50;
+    --accent-saturation: 100%;
+    --accent-lightness: 93%;
+    --accent-lightness-hover: 85%;
+  
+    --accent-500: hsl(
+      var(--accent-hue),
+      var(--accent-saturation),
+      var(--accent-lightness)
+    );
+  
+    --accent-color-hover: hsl(
+      var(--accent-hue),
+      var(--accent-saturation),
+      var(--accent-lightness-hover)
+    );
+  
+    /* Font */
+    --font-size-xsmall: 1rem;
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.4rem;
+    --font-size-large: 1.6rem;
+    --font-size-xlarge: 1.8rem;
+    --font-size-xxlarge: 2.4rem;
+    --font-size-xxxlarge: 3.2rem;
+  
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+  
+    /* Spacing */
+    --line-height-small: 1.2;
+    --line-height-medium: 1.4;
+    --line-height-large: 1.8;
+  
+    /* Padding */
+    --padding-xsmall: 0.4rem;
+    --padding-small: 0.8rem;
+    --padding-medium: 1.6rem;
+    --padding-large: 2.4rem;
+    --padding-xlarge: 3.2rem;
+    --padding-xxlarge: 4rem;
+  
+    /* Margin */
+    --margin-small: 0.4rem;
+    --margin-small: 0.8rem;
+    --margin-medium: 1.6rem;
+    --margin-large: 2.4rem;
+    --margin-xlarge: 3.2rem;
+    --margin-xxlarge: 4rem;
+  
+    /* Gap */
+    --gap-small: 0.8rem;
+    --gap-medium: 1.6rem;
+    --gap-large: 2.4rem;
+    --gap-xlarge: 3.2rem;
+    --gap-xxlarge: 4rem;
+  
+    /* Border Radius */
+    --border-radius-xsmall: 0.4rem;
+    --border-radius-small: 0.8rem;
+    --border-radius-medium: 1.6rem;
+    --border-radius-large: 2.4rem;
+    --border-radius-xlarge: 3.2rem;
+    --border-radius-xxlarge: 4rem;
+  }
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: dodgerblue;
+}
