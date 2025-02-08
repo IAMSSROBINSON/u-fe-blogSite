@@ -19,6 +19,9 @@ const controller = {
         else if (window.location.pathname.includes("blogTemplate")) {
             console.log("You are on a blogTemplate.html page");
         }
+        else {
+            console.log("This page is unaccounted for");
+        }
     } 
 }
 controller.init();
