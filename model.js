@@ -19,6 +19,9 @@ const model = {
             console.log("Local storage data set to blogSite");
             console.log("this.data:", this.data);
         }
+    },
+    getCurrentlySelectedSubjectId() {
+        return this.data.currentlySelectedSubjectId;
     }
 
 }

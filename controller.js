@@ -13,14 +13,17 @@ const controller = {
         if (window.location.pathname.includes("u-fe-blogSite")) {
             console.log("You are on the homepage /u-fe-blogSite");
             model.init();
-            view.init();
-
         }
         else if (window.location.pathname.includes("blogTemplate")) {
             console.log("You are on a blogTemplate.html page");
         }
         else {
             console.log("This page is unaccounted for");
+        }
+
+        const currentlySelectedSubjectId = model.getCurrentlySelectedSubjectId();
+        if (currentlySelectedSubjectId) {
+            view.setCurrentlySelectedSubjectId(currentlySelectedSubjectId);
         }
     } 
 }
