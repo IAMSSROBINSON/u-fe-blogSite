@@ -6,9 +6,9 @@ import view from './view.js';
 const controller = {
     init () {
         console.log(window.location);
-        console.log(window.location.pathname.includes("index"));
+        console.log(window.location.pathname.includes("blogSite"));
 
-        if (window.location.pathname.includes("index")) {
+        if (window.location.pathname.includes("blogSite")) {
             console.log("You are on the homepage");
             model.init();
             view.init();
