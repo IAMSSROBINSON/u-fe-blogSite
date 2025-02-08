@@ -1,0 +1,40 @@
+@media screen and (min-width: 580px) {
+  body .footer-container {
+    display: unset;
+    display: grid;
+    grid-template-columns: auto minmax(auto, calc(736px/2)) minmax(auto, calc(736px/2)) auto;
+    align-items: center;
+  }
+
+  .footer-copyright {
+    grid-column: 2/3;
+    grid-row: 1/-1;
+  }
+
+  .form {
+    grid-column: 3/4;
+    grid-row: 1/-1;
+  }
+
+  .email-label {
+    align-self: flex-start;
+  }
+
+  footer .input-button-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
+  }
+
+  .email-input {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+  }
+
+  footer .submit-button {
+    grid-column: 2/3;
+    grid-row: 1/-1;
+    border-top: none;
+    border-left: 1px solid var(--spacegrey-600);
+  }
+}

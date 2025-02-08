@@ -87,6 +87,8 @@
   --border-radius-large: 2.4rem;
   --border-radius-xlarge: 3.2rem;
   --border-radius-xxlarge: 4rem;
+
+  --footer-offset-body-padding: var(--padding-large);
 }
 
 *,

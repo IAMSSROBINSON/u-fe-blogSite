@@ -7,6 +7,7 @@
     grid-template-rows: repeat(auto-fit, minmax(auto, min-content));
     grid-auto-rows: min-content;
     gap: var(--gap-xxlarge);
+    margin-bottom: calc(var(--margin-xlarge) * 2);
 }
 
 .card {
