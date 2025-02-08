@@ -23,6 +23,7 @@ const controller = {
         }
 
         const currentlySelectedSubjectId = model.getCurrentlySelectedSubjectId();
+        console.log("currentlySelectedSubjectId:", currentlySelectedSubjectId);
         if (currentlySelectedSubjectId) {
             view.setCurrentlySelectedSubjectId(currentlySelectedSubjectId);
         }
