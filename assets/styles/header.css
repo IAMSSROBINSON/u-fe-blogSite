@@ -8,7 +8,6 @@
 }
 
 .logo-container {
-    /* margin-right: auto; */
     width: min-content;
 }
 
@@ -17,7 +16,6 @@
 }
 
 .nav-container {
-
 }
 
 .nav-list-item {
@@ -25,5 +23,5 @@
 }
 
 .menu-icon {
-
+    cursor: pointer;
 }
