@@ -22,6 +22,11 @@ const model = {
     },
     getCurrentlySelectedSubjectId() {
         return this.data.currentlySelectedSubjectId;
+    },
+    setCurrentlySelectedSubjectId(id) {
+        this.data.currentlySelectedSubjectId = id;
+        localStorage.setItem("blogSite", JSON.stringify(this.data));
+        console.log("local storage data set:", this.data);
     }
 
 }
