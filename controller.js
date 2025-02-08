@@ -1,5 +1,6 @@
 console.log("Hello World!");
 console.log("pathname:", window.location.pathname);
+console.log("pathname includes u-fe-blogSite:", window.location.pathname.includes("u-fe-blogSite"));
 // import model from './model.js';
 // import view from './view.js';
 
