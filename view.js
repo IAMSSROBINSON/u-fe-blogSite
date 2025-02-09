@@ -25,6 +25,7 @@ const view = {
         console.log("view cardDetails:", cardDetails.cardTitle);
         this.renderSubjectDateStamp(cardDetails.cardSubject, cardDetails.cardDateStamp);
         this.renderTitle(cardDetails.cardTitle);
+        this.renderImage(cardDetails.cardSubject);
        
     },
     renderSubjectDateStamp (subject, dateStamp) {
@@ -55,6 +56,23 @@ const view = {
 
         this.blogPostHeader.after(this.blogPostTitle); 
 
+    },
+    renderImage (imageName) {
+        this.blogPostImageContainer = document.createElement("figure");
+        this.blogPostImageContainer.classList.add("blogPost-image-container");
+
+        const img = document.createElement("img");
+        img.classList.add("blogPost-image");
+        img.src = `./assets/images/photos/${imageName}.jpg`;
+        img.setAttribute("alt", "Blog post image");
+
+        const caption = document.createElement("caption");
+        caption.classList.add("blogPost-image-caption");
+
+        this.blogPostImageContainer.appendChild(img);
+        this.blogPostImageContainer.appendChild(caption);
+        
+        this.blogPostTitle.after(this.blogPostImageContainer);
     }
 };
 export default view;
