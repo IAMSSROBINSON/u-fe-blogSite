@@ -12,6 +12,11 @@ const controller = {
     },
     handleArticleClick (event) {
         console.log("controller handleArticleClick:", event);
+        const target = event.target;
+        const card = target.closest(".main-list-item");
+        const cardId = card?.id;
+        console.log("target, card, cardId:", target, card, cardId);
+        model.setCurrentlySelectedCardId(cardId);
     },
     renderCurrentSubject () {
         const subject = model.getSelectedSubject();

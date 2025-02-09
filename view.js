@@ -13,7 +13,7 @@ const view = {
         console.log("view renderCurrentSubject:", subjectId);
         const subjects = [...document.querySelectorAll(".subjects-list-item")];
         subjects.forEach((element) => {
-            console.log("element:", element);
+            // console.log("element:", element);
             element?.classList?.remove("selected");
         });
 

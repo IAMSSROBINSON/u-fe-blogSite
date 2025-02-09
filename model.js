@@ -29,6 +29,10 @@ const model = {
         if (subject) {
             return subject;
         }
+    },
+    setCurrentlySelectedCardId (cardId) {
+        data.currentlySelectedCardId = cardId;
+        console.log("model setCurrentlySelectedCardId:", data.currentlySelectedCardId);
     }
 };
 
