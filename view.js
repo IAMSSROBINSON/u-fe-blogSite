@@ -66,10 +66,13 @@ const view = {
     renderImage (imageName) {
         this.blogPostImageContainer = document.createElement("figure");
         this.blogPostImageContainer.classList.add("blogPost-image-container");
-
+        const imageLower = imageName.toLowerCase();
+        console.log("view renderImage imageName", imageName, imageLower);
+        
         const img = document.createElement("img");
         img.classList.add("blogPost-image");
-        img.src = `./assets/images/photos/${imageName.toLowerCase()}.jpg`;
+        img.src = `./assets/images/photos/${imageLower
+        }.jpg`;
         img.setAttribute("alt", "Blog post image");
 
         this.blogPostImageContainer.appendChild(img);
