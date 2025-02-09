@@ -69,9 +69,12 @@ const view = {
         const imageLower = imageName.toLowerCase();
         console.log("view renderImage imageName", imageName, imageLower);
         
+        const isLocal = window.location.hostname === "http://127.0.0.1" || window.location.hostname === "localhost";
+        const basePath = isLocal ? "" : "/u-fe-blogSite";
+
         const img = document.createElement("img");
         img.classList.add("blogPost-image");
-        img.src = `u-fe-blogSite/assets/images/photos/${imageLower
+        img.src = `${basePath}/assets/images/photos/${imageLower
         }.jpg`;
         img.setAttribute("alt", "Blog post image");
 
