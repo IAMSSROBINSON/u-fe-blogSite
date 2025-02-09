@@ -30,6 +30,9 @@ const model = {
             return subject;
         }
     },
+    setSelectedSubject (id) {
+        data.currentlySelectedSubjectId = id;
+    },
     setCurrentlySelectedCardId (cardId) {
         data.currentlySelectedCardId = cardId;
         console.log("model setCurrentlySelectedCardId:", data.currentlySelectedCardId);

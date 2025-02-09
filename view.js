@@ -2,6 +2,11 @@ import controller from "./controller.js";
 
 const view = {
     init () {
+        this.subjectsContainer = document.querySelector(".subjects-container");
+        this.subjectsContainer.addEventListener("click", (event) => {
+            console.log("subjectsContainer:", this.subjectsContainer);
+            controller.handleSubjectClick(event);
+        });
         this.mainContainerList = document.querySelector(".main-container-list");
         this.mainContainerList.addEventListener("click", (event) => {
             console.log("this.mainContainerList:", this.mainContainerList);
