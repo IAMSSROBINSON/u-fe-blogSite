@@ -22,6 +22,28 @@ const view = {
     },
     renderPost (cardDetails) {
         console.log("view cardDetails:", cardDetails);
+        // this.headingContainer.style.display = "none";
+        this.renderSubjectDateStamp(cardDetails.cardSubject, cardDetails.cardDateStamp);
+    },
+    renderSubjectDateStamp (subject, dateStamp) {
+        this.headingContainer.style.display = "none";
+        this.subjectsContainer.style.display = "none";
+        console.log("renderSubjectDateStamp:", subject, dateStamp);
+        const container = document.createElement("div");
+        container.classList.add("blogPost-header");
+
+        const subjectElement = document.createElement("p");
+        subjectElement.classList.add("blogPost-subject");
+        subjectElement.textContent = subject
+
+        const dateStampElement = document.createElement("p");
+        dateStampElement.classList.add("blogPost-date");
+        dateStampElement.textContent = dateStamp;
+
+        container.appendChild(subjectElement);
+        container.appendChild(dateStampElement);
+
+        this.subjectsContainer.after(container);
     }
 };
 export default view;

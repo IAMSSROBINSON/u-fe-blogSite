@@ -1,0 +1,19 @@
+.blogPost-header {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blogPost-subject {
+    font-size: var(--font-size-small);
+    /* background-color: yellow; */
+    padding: var(--padding-xsmall) var(--padding-small);
+    border: 0.5px solid var(--spacegrey-800);
+    border-radius: var(--border-radius-large);
+}
+
+.blogPost-dateStamp {
+   
+}
