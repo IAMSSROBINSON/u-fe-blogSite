@@ -71,7 +71,7 @@ const view = {
         
         const img = document.createElement("img");
         img.classList.add("blogPost-image");
-        img.src = `./assets/images/photos/${imageLower
+        img.src = `u-fe-blogSite/assets/images/photos/${imageLower
         }.jpg`;
         img.setAttribute("alt", "Blog post image");
 
