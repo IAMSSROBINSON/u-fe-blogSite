@@ -2,6 +2,7 @@ import controller from "./controller.js";
 
 const view = {
     cacheDOM () {
+        this.body = document.body;
         this.headerContainer = document.querySelector(".header-container");
         this.logoContainer = document.querySelector(".logo-container");
         this.navContainer = document.querySelector(".nav-container");
@@ -21,16 +22,21 @@ const view = {
         window.location.pathname = "/u-fe-blogSite/blogTemplate.html";
     },
     renderPost (cardDetails) {
+        this.body.style.gridTemplateRows = "min-content min-content auto auto auto auto";
+        this.footerContainer.style.gridRow = "7/8" 
         console.log("view cardDetails:", cardDetails);
         console.log("view cardDetails:", cardDetails.cardTitle);
         this.renderSubjectDateStamp(cardDetails.cardSubject, cardDetails.cardDateStamp);
         this.renderTitle(cardDetails.cardTitle);
         this.renderImage(cardDetails.cardSubject);
+        this.renderCaption();
+        this.renderArticle(cardDetails.cardArticle);
        
     },
     renderSubjectDateStamp (subject, dateStamp) {
         this.headingContainer.style.display = "none";
         this.subjectsContainer.style.display = "none";
+        this.mainContainer.style.display = "none";
         console.log("renderSubjectDateStamp:", subject, dateStamp);
         this.blogPostHeader = document.createElement("div");
         this.blogPostHeader.classList.add("blogPost-header");
@@ -66,13 +72,21 @@ const view = {
         img.src = `./assets/images/photos/${imageName}.jpg`;
         img.setAttribute("alt", "Blog post image");
 
-        const caption = document.createElement("caption");
-        caption.classList.add("blogPost-image-caption");
-
         this.blogPostImageContainer.appendChild(img);
-        this.blogPostImageContainer.appendChild(caption);
-        
         this.blogPostTitle.after(this.blogPostImageContainer);
+    },
+    renderCaption () {
+        this.blogPostCaption = document.createElement("figcaption");
+        this.blogPostCaption.classList.add("blogPost-image-caption");
+        this.blogPostCaption.textContent = "High quality image of the subject.";
+        
+        this.blogPostImageContainer.after(this.blogPostCaption);
+    },
+    renderArticle (text) {
+        this.blogPostArticle = document.createElement("p");
+        this.blogPostArticle.classList.add("blogPost-article");
+        this.blogPostArticle.textContent = text;
+        this.blogPostCaption.after(this.blogPostArticle);
     }
 };
 export default view;
