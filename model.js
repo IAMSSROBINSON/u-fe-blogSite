@@ -11,8 +11,10 @@ const model = {
         // render the currentlySelectedSubjectId in the view through controller
         if (window.location.pathname.endsWith("blogTemplate.html")) {
             console.log("You are on the blogTemplatePage");
-        } else if (window.location.pathname.endsWith("/u-fe-blogSite") || window.location.pathname.endsWith("index.html")) {
+            console.log("blogTemplatePage currentlySelectedSubjectId:", data.currentlySelectedSubjectId);
+        } else if (window.location.pathname.endsWith("u-fe-blogSite/") || window.location.pathname.endsWith("index.html")) {
             console.log("You are on the blogHomePage");
+            console.log("blogHomePage currentlySelectedSubjectId:", data.currentlySelectedSubjectId);
         }
 
         // if the homepage is open
@@ -21,7 +23,13 @@ const model = {
         // render the currentlySelectedSubjectId in the view through controller
 
 
-    }   
+    },
+    getSelectedSubject () {
+        const subject = data.currentlySelectedSubjectId;
+        if (subject) {
+            return subject;
+        }
+    }
 };
 
 export default model;
