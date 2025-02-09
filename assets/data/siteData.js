@@ -1,4 +1,4 @@
-const data = {
+const siteData = {
   subjects: [
     "all",
     "philosophy",
@@ -135,4 +135,4 @@ const data = {
 function generateId() {
   return Math.random().toString(32).substring(2);
 }
-export default data;
+export default siteData;
