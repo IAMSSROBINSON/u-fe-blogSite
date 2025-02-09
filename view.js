@@ -69,7 +69,7 @@ const view = {
 
         const img = document.createElement("img");
         img.classList.add("blogPost-image");
-        img.src = `/assets/images/photos/${imageName}.jpg`;
+        img.src = `/assets/images/photos/${imageName.toLowerCase()}.jpg`;
         img.setAttribute("alt", "Blog post image");
 
         this.blogPostImageContainer.appendChild(img);
