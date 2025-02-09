@@ -6,7 +6,7 @@ import view from './view.js';
 
 const controller = {
     init () {
-      
+      model.init();
     }
 };
 controller.init();
