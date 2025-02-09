@@ -1,9 +1,10 @@
 .blogPost-header {
     grid-column: 2/3;
-    grid-row: 3/4;
+    grid-row: 2/3;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: var(--margin-medium);
 }
 
 .blogPost-subject {
@@ -16,4 +17,9 @@
 
 .blogPost-dateStamp {
    
+}
+
+.blogPost-title {
+    grid-column: 2/3;
+    grid-row: 3/4;
 }

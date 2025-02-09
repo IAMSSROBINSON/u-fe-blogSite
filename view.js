@@ -22,15 +22,17 @@ const view = {
     },
     renderPost (cardDetails) {
         console.log("view cardDetails:", cardDetails);
-        // this.headingContainer.style.display = "none";
+        console.log("view cardDetails:", cardDetails.cardTitle);
         this.renderSubjectDateStamp(cardDetails.cardSubject, cardDetails.cardDateStamp);
+        this.renderTitle(cardDetails.cardTitle);
+       
     },
     renderSubjectDateStamp (subject, dateStamp) {
         this.headingContainer.style.display = "none";
         this.subjectsContainer.style.display = "none";
         console.log("renderSubjectDateStamp:", subject, dateStamp);
-        const container = document.createElement("div");
-        container.classList.add("blogPost-header");
+        this.blogPostHeader = document.createElement("div");
+        this.blogPostHeader.classList.add("blogPost-header");
 
         const subjectElement = document.createElement("p");
         subjectElement.classList.add("blogPost-subject");
@@ -40,10 +42,19 @@ const view = {
         dateStampElement.classList.add("blogPost-date");
         dateStampElement.textContent = dateStamp;
 
-        container.appendChild(subjectElement);
-        container.appendChild(dateStampElement);
+        this.blogPostHeader.appendChild(subjectElement);
+        this.blogPostHeader.appendChild(dateStampElement);
 
-        this.subjectsContainer.after(container);
+        this.subjectsContainer.after(this.blogPostHeader);
+    },
+    renderTitle (title) {
+        console.log("renderTitle title", title);
+        this.blogPostTitle = document.createElement("h1");
+        this.blogPostTitle.classList.add("blogPost-title");
+        this.blogPostTitle.textContent = title;
+
+        this.blogPostHeader.after(this.blogPostTitle); 
+
     }
 };
 export default view;
