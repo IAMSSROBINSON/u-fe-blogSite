@@ -17,6 +17,7 @@ const controller = {
             console.log("controller getPosts cards", cards);
             if (cards) {
                 view.renderCards(cards);
+                view.setSelectedSubject("all");
             }
         }
     },
