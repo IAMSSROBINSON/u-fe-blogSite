@@ -1,31 +1,31 @@
 .subjects-container {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    display: flex;
-    gap: var(--gap-large);
-    overflow-x: auto;
-    padding: var(--padding-xsmall) 0;
-    margin-bottom: var(--margin-large);
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: flex;
+  gap: var(--gap-large);
+  overflow-x: auto;
+  padding: var(--padding-xsmall) 0;
+  margin-bottom: var(--margin-large);
 }
 
 .subjects-container::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .subjects-list-item {
-    padding: var(--padding-small) var(--padding-large);
-    border-radius: var(--border-radius-large);
-    border: 0.5px solid var(--spacegrey-800);
-    cursor: pointer;
-    font-size: var(--font-size-medium);
+  padding: var(--padding-small) var(--padding-large);
+  border-radius: var(--border-radius-large);
+  border: 0.5px solid var(--spacegrey-800);
+  cursor: pointer;
+  font-size: var(--font-size-medium);
 }
 
 .subjects-list-item:hover {
-    background-color: var(--accent);
-    font-weight: var(--font-weight-bold);
+  background-color: var(--accent);
+  font-weight: var(--font-weight-bold);
 }
 
 .selected {
-    background-color: var(--accent);
-    font-weight: var(--font-weight-bold);
+  background-color: var(--accent);
+  font-weight: var(--font-weight-bold);
 }

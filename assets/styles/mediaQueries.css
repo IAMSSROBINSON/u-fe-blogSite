@@ -2,7 +2,10 @@
   body .footer-container {
     display: unset;
     display: grid;
-    grid-template-columns: auto minmax(auto, calc(736px/2)) minmax(auto, calc(736px/2)) auto;
+    grid-template-columns: auto minmax(auto, calc(736px / 2)) minmax(
+        auto,
+        calc(736px / 2)
+      ) auto;
     align-items: center;
   }
 

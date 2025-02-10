@@ -73,7 +73,8 @@ const siteData = {
           picSrc: "/assets/images/design.webp",
           imgSrc: "/assets/images/design.jpg",
           altText: "Minimalist and maximalist design comparison.",
-          captionText: "The contrast between minimalism and maximalism in design",
+          captionText:
+            "The contrast between minimalism and maximalism in design",
         },
       ],
     },

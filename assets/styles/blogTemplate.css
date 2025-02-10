@@ -1,34 +1,28 @@
 .blogPost-header {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: var(--margin-medium);
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--margin-medium);
 }
 
 .blogPost-subject {
-    font-size: var(--font-size-small);
-    /* background-color: yellow; */
-    padding: var(--padding-xsmall) var(--padding-small);
-    border: 0.5px solid var(--spacegrey-800);
-    border-radius: var(--border-radius-large);
-}
-
-.blogPost-dateStamp {
-   
+  font-size: var(--font-size-small);
+  padding: var(--padding-xsmall) var(--padding-small);
+  border: 0.5px solid var(--spacegrey-800);
+  border-radius: var(--border-radius-large);
 }
 
 .blogPost-title {
-    grid-column: 2/3;
-    grid-row: 3/4;
+  grid-column: 2/3;
+  grid-row: 3/4;
 
-    hyphens: auto;
-    line-height: var(--line-height-medium);
-    font-size: clamp(1.125rem, 0.0673rem + 5.2885vw, 2.5rem);
-    margin-bottom: var(--margin-medium);
+  hyphens: auto;
+  line-height: var(--line-height-medium);
+  font-size: clamp(1.125rem, 0.0673rem + 5.2885vw, 2.5rem);
+  margin-bottom: var(--margin-medium);
 }
-
 
 .blogPost-image-container {
   height: min-content;
@@ -42,23 +36,22 @@
 }
 
 .blogPost-image {
-    object-fit: cover;
-    background-color: yellow;
+  object-fit: cover;
+  background-color: var(--spacegrey-100);
 }
 
 .blogPost-image-caption {
-    /* display: block; */
-    margin-bottom: var(--margin-large);
-    grid-column: 2/3;
-    grid-row: 5/6;
-    margin-top: var(--margin-small);
-    text-align: center;
-    font-size: var(--font-size-xsmall);
+  margin-bottom: var(--margin-large);
+  grid-column: 2/3;
+  grid-row: 5/6;
+  margin-top: var(--margin-small);
+  text-align: center;
+  font-size: var(--font-size-xsmall);
 }
 
 .blogPost-article {
-    grid-column: 2/3;
-    grid-row: 6/7;
-    font-size: clamp(1rem, 0.6154rem + 1.9231vw, 1.5rem);
-    line-height: var(--line-height-large);
+  grid-column: 2/3;
+  grid-row: 6/7;
+  font-size: clamp(1rem, 0.6154rem + 1.9231vw, 1.5rem);
+  line-height: var(--line-height-large);
 }
