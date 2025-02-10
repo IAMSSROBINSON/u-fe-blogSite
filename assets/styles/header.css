@@ -15,11 +15,11 @@
   font-size: var(--font-size-xlarge);
 }
 
-.nav-list-item {
+.nav-item-link {
   font-size: var(--font-size-large);
 }
 
-.nav-list-item-link:hover {
+.nav-item-link:hover {
   color: var(--text-link-hover-color);
 }
 
