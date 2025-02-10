@@ -46,6 +46,7 @@ const controller = {
         const subject = target.closest(".subjects-list-item");
         const subjectId = subject?.id;
         if (subjectId) {
+            view.setSelectedSubject(subjectId);
             console.log("controller handle subjects", subjectId);
         // from data.posts filter posts whose subjects include subjectId
         const filteredSubjects = model.filterSubjects(subjectId);

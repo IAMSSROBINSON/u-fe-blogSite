@@ -120,6 +120,12 @@ const view = {
        console.log("view filteredArr:", filteredArr);
        this.mainContainerList.innerHTML = "";
        this.renderCards(filteredArr);
+    },
+    setSelectedSubject (subjectId) {
+        const subjects = [...document.querySelectorAll(".subjects-list-item")];
+        subjects.forEach((subject) => {
+            subject.classList.toggle("selected", subject.id === subjectId);
+        });
     }
 };
 export default view;
