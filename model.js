@@ -52,6 +52,9 @@ const model = {
     console.log("model setCardDetails local storage set:", this.data);
     
    }
+  },
+  getPosts () {
+    return this.data.posts;
   }
 };
 

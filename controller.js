@@ -13,6 +13,13 @@ const controller = {
             view.renderPost(model.getCurrentPost());
         } else {
             console.log("You are on the homepage blogSite/index.html");
+            const cards = model.getPosts();
+            console.log("controller getPosts cards", cards);
+            if (cards) {
+                view.renderCards(cards);
+            }
+
+
         }
     },
     handleCard(e) { 
@@ -30,17 +37,17 @@ const controller = {
             const cardDetails = {id, title, article, subject, dateStamp};
             console.log("controller handleCard:", {id, title, article, subject, dateStamp});
             model.setCardDetails(cardDetails);
-            view.renderBlogTemplate();
-            // const promise = new Promise((res, rej) => {
-            //     setTimeout(() => {
-            //         res(view.renderBlogTemplate());
-            //     }, 0);
-            // });
-         
-            
+            view.renderBlogTemplate();   
         } else {
             console.log("no card found");
         }
+    },
+    handleSubjects (e) {
+        const target = e.target;
+        const subject = target.closest(".subjects-list-item");
+        const subjectId = subject.id;
+        console.log("controller handle subjects", subject);
+        // get array of 
     }
 }
 controller.init();

@@ -17,6 +17,10 @@ const view = {
             e.preventDefault();
             controller.handleCard(e);
         })
+
+        this.subjectsContainer.addEventListener("click", (e) => {
+            controller.handleSubjects(e);
+        })
     },
     renderBlogTemplate () {
         window.location.pathname = "/u-fe-blogSite/blogTemplate.html";
@@ -93,6 +97,24 @@ const view = {
         this.blogPostArticle.classList.add("blogPost-article");
         this.blogPostArticle.textContent = text;
         this.blogPostCaption.after(this.blogPostArticle);
+    },
+    renderCards (arrOfPosts) {
+        console.log("view renderCards posts:", arrOfPosts);
+        const documentFragment = document.createDocumentFragment();
+        arrOfPosts.forEach((post) => {
+            const cardTemplate =
+            `<li class="main-list-item card" id=${post.id}>
+                <a href="./blogTemplate.html" class="card-link">
+                    <h4 class="card-title">${post.title}</h4>
+                    <p class="card-article">${post.article}</p>
+                    <div class="card-footer">
+                        <p class="card-subject" data-subject="philosophy">${post.subjects[0][0].toUpperCase() + post.subjects[0].substring(1)}</p>
+                        <p class="card-dateStamp">${post.dateStamp}</p>
+                    </div>
+                </a>
+            </li>`;
+            this.mainContainerList.insertAdjacentHTML("beforeend", cardTemplate);
+        });
     }
 };
 export default view;
