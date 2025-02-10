@@ -18,8 +18,6 @@ const controller = {
             if (cards) {
                 view.renderCards(cards);
             }
-
-
         }
     },
     handleCard(e) { 
@@ -44,10 +42,17 @@ const controller = {
     },
     handleSubjects (e) {
         const target = e.target;
+        console.log("controller handleSubjects target:", target)
         const subject = target.closest(".subjects-list-item");
-        const subjectId = subject.id;
-        console.log("controller handle subjects", subject);
-        // get array of 
+        const subjectId = subject?.id;
+        if (subjectId) {
+            console.log("controller handle subjects", subjectId);
+        // from data.posts filter posts whose subjects include subjectId
+        const filteredSubjects = model.filterSubjects(subjectId);
+        if (filteredSubjects) {
+            view.renderFilteredSubjects(filteredSubjects);
+        }
+        }
     }
 }
 controller.init();

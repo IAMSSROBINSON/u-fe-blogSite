@@ -55,7 +55,18 @@ const model = {
   },
   getPosts () {
     return this.data.posts;
+  },
+  filterSubjects (subjectId) {
+    console.log("model filtered subjects:", subjectId);
+    console.log("model filtered subjects:", this.data.posts);
+    const filtered = this.data.posts.filter((post) => {
+      console.log("post subjects:", post.subjects);
+      console.log("post subjects:", post.subjects.includes("design"));
+      return post.subjects.includes(subjectId);
+    });
+    console.log("post subjects filtered:", filtered);
+    return filtered.length > 0 ? filtered : null;
   }
-};
+}
 
 export default model;

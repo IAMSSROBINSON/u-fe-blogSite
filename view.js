@@ -115,6 +115,11 @@ const view = {
             </li>`;
             this.mainContainerList.insertAdjacentHTML("beforeend", cardTemplate);
         });
+    },
+    renderFilteredSubjects (filteredArr) {
+       console.log("view filteredArr:", filteredArr);
+       this.mainContainerList.innerHTML = "";
+       this.renderCards(filteredArr);
     }
 };
 export default view;
